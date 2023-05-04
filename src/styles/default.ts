@@ -6,13 +6,21 @@ export const defaultTheme = {
   'gray-200': '#C0C0C0',
   'gray-300': '#909090',
   
-  'blue-100': '#A1E3FF',
-  'blue-200': '#91C3E8',
-  'blue-300': '#5183B8',
-  'blue-400': '#316398',
+  'purple-100': '#965fd4',
+  'purple-300': '#714ea9',
+  'purple-500': '#503d7f',
+  'purple-700': '#342c56',
+  'purple-900': '#1d1a2f',
+
+  'green-100': '#8bd450',
+  'green-300': '#6bb452',
+  'green-500': '#52954f',
+  'green-700': '#3f7548',
+  'green-900': '#32573e',
 }
 
 export const defaultFontSize = {
+  'tiny': '12px',
   'small': '14px',
   'medium': '22px',
   'big': '32px'

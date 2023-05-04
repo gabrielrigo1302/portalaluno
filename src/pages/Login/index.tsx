@@ -7,6 +7,7 @@ import { Label } from "../../components/Label"
 import { defaultFontSize, defaultFontWeight, defaultTheme } from "../../styles/default";
 import { LoginBody, LoginContainer, LoginFormBody, LoginForm, LoginFormHeader, LoginFormFooter } from "./styles"
 import { useNavigate } from "react-router-dom";
+import { CheckBox } from "../../components/CheckBox";
 
 export default function Login() {
   const [unity, setUnity] = useState('');
@@ -14,14 +15,24 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [logged, setLogged] = useState(false);
   const [allowLogin, setAllowLogin] = useState(false);
+  const [keepLogged, setKeepLogged] = useState(false);
   
   const navigate = useNavigate();
 
   const updateUnity = (unity: string) => setUnity(unity);
   const updateUser = (user: string) => setUser(user);
   const updatePassword = (password: string) => setPassword(password);  
-  const login = () => setLogged(true);
   
+  const updateKeepLogged = () => {
+    console.log('keepLogged --- ', keepLogged);
+    setKeepLogged(!keepLogged);
+  }
+  
+  const login = () => {
+    setLogged(true);
+  };
+
+
   useEffect(() => {
     logged && navigate('/home');
   }, [logged, navigate])
@@ -39,7 +50,7 @@ export default function Login() {
       <Header 
         message="Portal do Aluno" 
         size={defaultFontSize.big}
-        textColor={defaultTheme.white}
+        textColor={defaultTheme["purple-900"]}
         weight={defaultFontWeight.bold} 
       />
       <LoginBody>
@@ -68,6 +79,7 @@ export default function Login() {
             />
           </LoginFormBody>
           <LoginFormFooter>
+            <CheckBox message="Lembrar meu login nesta máquina." onClick={updateKeepLogged}/>
             <Button message="Cadastrar" enabled={false} onClick={() => {}}/>
             <Button message="Entrar" enabled={allowLogin} onClick={login}/>
           </LoginFormFooter>

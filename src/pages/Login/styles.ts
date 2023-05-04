@@ -1,17 +1,14 @@
 import styled from 'styled-components'
 
 export const LoginContainer = styled.div`
-  max-width: 74rem;
-  height: 90vh;
-  margin: auto;
-  background: ${(props) => props.theme['gray-100']};
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: ${(props) => props.theme['purple-900']};
+  margin: 0px;
 `
 
 export const LoginBody = styled.div`
-  height: 100%;
+  height: 90%;
   border-radius: 8px;
   display: flex;
   flex-direction: row;

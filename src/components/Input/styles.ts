@@ -20,7 +20,7 @@ export const InputField = styled.input<Props>`
   box-sizing: border-box;
   background: ${(props) => props.theme['gray-100']};
   border-radius: 5px;
-  border-color: ${(props) => props.theme['black']};
+  border-color: ${(props) => props.theme['purple-900']};
   font-family: ${defaultFont.font};
   font-size: ${(props) => props.size || defaultFontSize.small};
   font-weight: ${(props) => props.weight || defaultFontWeight.normal};

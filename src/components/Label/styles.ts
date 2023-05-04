@@ -10,7 +10,7 @@ interface Props {
 export const StyledLabel = styled.label<Props>`
   width: 100%;
   font-size: ${(props) => props.size || defaultFontSize.medium};
-  color: ${(props) => props.textColor || defaultTheme.black };
+  color: ${(props) => props.textColor || defaultTheme['purple-900'] };
   align-content: center;
   font-family: ${defaultFont.font};
   font-weight: ${(props) => props.weight || defaultFontWeight.normal};

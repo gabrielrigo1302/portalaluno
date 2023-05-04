@@ -4,8 +4,8 @@ import { defaultFont, defaultFontSize, defaultFontWeight } from '../../styles/de
 export const StyledButton = styled.button`
   width: 120px;
   height: 40px;
-  background: ${(props) => props.theme['blue-200']};
-  color: ${(props) => props.theme['blue-400']};
+  background: ${(props) => props.theme['purple-100']};
+  color: ${(props) => props.theme['purple-500']};
   border-radius: 12px;
   border-color: transparent;
   display: flex;
@@ -18,10 +18,10 @@ export const StyledButton = styled.button`
 
   &:disabled {
     color: ${(props) => props.theme['gray-300']};
-    background: ${(props) => props.theme['gray-200']};
+    background: ${(props) => props.theme['gray-100']};
   }
 
   &:active {
-    background: ${(props) => props.theme['blue-300']};
+    background: ${(props) => props.theme['purple-300']};
   }
 `
