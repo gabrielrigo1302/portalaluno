@@ -1,27 +1,24 @@
-import styled from 'styled-components'
-import { defaultFont, defaultFontSize, defaultFontWeight } from '../../styles/default'
+import { defaultFont, defaultFontSize, defaultFontWeight, defaultTheme } from '../../styles/default'
 
-export const StyledButton = styled.button`
-  width: 120px;
-  height: 40px;
-  background: ${(props) => props.theme['purple-100']};
-  color: ${(props) => props.theme['purple-500']};
-  border-radius: 12px;
-  border-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: ${defaultFont.font};
-  font-size: ${defaultFontSize.small};
-  font-weight: ${defaultFontWeight.normal};
-  letter-spacing: 2.5px;
-
-  &:disabled {
-    color: ${(props) => props.theme['gray-300']};
-    background: ${(props) => props.theme['gray-100']};
+export const style = { 
+  width: '120px',
+  height: '40px',
+  borderRadius: '12px',
+  background: `${defaultTheme['purple-100']}`,
+  color: `${defaultTheme['purple-500']}`,
+  borderColor: 'transparent',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontFamily: `${defaultFont.font}`,
+  fontSize: `${defaultFontSize.small}`,
+  fontWeight: `${defaultFontWeight.normal}`,
+  letterSpacing: '2.5px',
+  '&:disabled': {
+    color: `${defaultTheme['gray-300']}`,
+    background: `${defaultTheme['gray-100']}`,
+  },
+  '&:hover': {
+    background: `${defaultTheme['purple-300']}`,
   }
-
-  &:active {
-    background: ${(props) => props.theme['purple-300']};
-  }
-`
+};

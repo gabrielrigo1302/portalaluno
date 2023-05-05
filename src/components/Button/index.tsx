@@ -1,4 +1,5 @@
-import { StyledButton } from "./styles";
+import { Button } from "@mui/material";
+import { style } from "./styles";
 
 interface ButtonProps {
   enabled?: boolean,
@@ -6,12 +7,17 @@ interface ButtonProps {
   onClick: () => void
 }
 
-export const Button = (props: ButtonProps) => {
+export const CustomButton = (props: ButtonProps) => {
   const { message, enabled, onClick } = props;
 
-  return(  
-    <StyledButton disabled={!enabled} onClick={() => onClick()}>
+  return(
+    <Button 
+      disabled={!enabled} 
+      onClick={() => onClick()} 
+      variant="contained" 
+      sx={style} 
+    > 
       {message}
-    </StyledButton>
+    </Button>
   )
 }

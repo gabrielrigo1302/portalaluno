@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-empty-function */ //remover quando adicionar a função para o segundo botão
 import { useEffect, useState } from "react";
-import { Button } from "../../components/Button";
+import { CustomButton } from "../../components/Button";
 import { Header } from "../../components/Header"
 import { Input } from "../../components/Input";
 import { Label } from "../../components/Label"
@@ -80,8 +80,8 @@ export default function Login() {
           </LoginFormBody>
           <LoginFormFooter>
             <CheckBox message="Lembrar meu login nesta máquina." onClick={updateKeepLogged}/>
-            <Button message="Cadastrar" enabled={false} onClick={() => {}}/>
-            <Button message="Entrar" enabled={allowLogin} onClick={login}/>
+            <CustomButton message="Cadastrar" enabled={false} onClick={() => {}}/>
+            <CustomButton message="Entrar" enabled={allowLogin} onClick={login}/>
           </LoginFormFooter>
         </LoginForm>
       </LoginBody>
