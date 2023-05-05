@@ -7,7 +7,7 @@ import { Label } from "../../components/Label"
 import { defaultFontSize, defaultFontWeight, defaultTheme } from "../../styles/default";
 import { LoginBody, LoginContainer, LoginFormBody, LoginForm, LoginFormHeader, LoginFormFooter } from "./styles"
 import { useNavigate } from "react-router-dom";
-import { CheckBox } from "../../components/CheckBox";
+import { CustomCheckbox } from "../../components/CheckBox";
 
 export default function Login() {
   const [unity, setUnity] = useState('');
@@ -79,7 +79,11 @@ export default function Login() {
             />
           </LoginFormBody>
           <LoginFormFooter>
-            <CheckBox message="Lembrar meu login nesta máquina." onClick={updateKeepLogged}/>
+            <CustomCheckbox 
+              message="Lembrar meu login nesta máquina." 
+              onClick={updateKeepLogged} 
+              checked={keepLogged}
+            />
             <CustomButton message="Cadastrar" enabled={false} onClick={() => {}}/>
             <CustomButton message="Entrar" enabled={allowLogin} onClick={login}/>
           </LoginFormFooter>
